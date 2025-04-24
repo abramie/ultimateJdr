@@ -6,6 +6,13 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 function App() {
+
+  const [data, setData] = React.useState(null);
+  React.useEffect(() => {
+    fetch("/api")
+        .then((res) => res.json())
+        .then((data) => setData(data.message));
+  }, []);
   return (
     <div className="App">
       <header className="App-header">
@@ -23,7 +30,7 @@ function App() {
         >
           Learn React
         </a>
-        Test
+        <p>{!data ? "Loading..." : data}</p>
       </header>
       <Container>
         <Row>
