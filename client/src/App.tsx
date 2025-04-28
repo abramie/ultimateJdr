@@ -14,37 +14,37 @@ function App() {
         .then((data) => setData(data.message));
   }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <Button variant={"primary"} as="a" >
-          Button as link
-        </Button>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <p>{!data ? "Loading..." : data}</p>
-      </header>
-      <Container>
-        <Row>
-          <Col className={"border"}>1 of 3</Col>
-          <Col className={"border"} xs={6}>2 of 3 (wider)</Col>
-          <Col className={"border"}>3 of 3</Col>
-        </Row>
-        <Row>
-          <Col className={"border"}>1 of 3</Col>
-          <Col className={"border"} xs={5}>2 of 3 (wider)</Col>
-          <Col className={"border"}>3 of 3</Col>
-        </Row>
-      </Container>
-    </div>
+      <div className="App">
+        <header className="App-header">
+          <p>
+            Edit <code>src/App.tsx</code> and save to reload.
+          </p>
+          <Button variant={"primary"} as="a" >
+            Button as link
+          </Button>
+          <a
+              className="App-link"
+              href="https://reactjs.org"
+              target="_blank"
+              rel="noopener noreferrer"
+          >
+            Learn React
+          </a>
+          <p>{!data ? "Loading..." : data}</p>
+        </header>
+        <Container>
+          <Row>
+            <Col className={"border"}>1 of 3</Col>
+            <Col className={"border"} xs={6}>2 of 3 (wider)</Col>
+            <Col className={"border"}>3 of 3</Col>
+          </Row>
+          <Row>
+            <Col className={"border"}>1 of 3</Col>
+            <Col className={"border"} xs={5}>2 of 3 (wider)</Col>
+            <Col className={"border"}>3 of 3</Col>
+          </Row>
+        </Container>
+      </div>
   );
 }
 
